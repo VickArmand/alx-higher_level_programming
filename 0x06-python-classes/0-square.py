@@ -5,9 +5,8 @@ Created on Tue Jan 26 14:21:54 2023
 
 """
 class Square:
-   """Empty class Square that defines a square
-   
-   Attributes:
-        empty
-   """
-    pass
+	"""Empty class Square that defines a square
+	Attributes:
+		empty
+	"""
+	pass
