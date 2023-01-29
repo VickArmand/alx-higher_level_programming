@@ -1,10 +1,13 @@
 #!/usr/bin/python3
+"""
+Created on Jan 26 2023
+@author VickArmand
+
+"""
 
 class Square:
     
-    """Class Square that defines a square object
-    
-    """
+    """Class Square that defines a square object """
     def __init__(self, size):
 
         """Initialize method that stores the size of the square

@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 
+"""
+Created on Jan 26 2023
+By VickArmand
+
+"""
 class Square:
 
-    """ A class that defines a square by its size
-
-    """
+    """ A class that defines a square by its size """
 
     def __init__(self, size=0):
 
-        """ Method to initialize the square object
-
-        """
+        """ Method to initialize the square object """
 
         if not isinstance(size, int):
 
@@ -28,9 +29,7 @@ class Square:
 
     def area(self):
 
-        """ Method that returns the square are of the object
-
-        """
+        """ Method that returns the square are of the object """
 
         return (self.__size ** 2)
 
@@ -40,9 +39,7 @@ class Square:
 
     def size(self):
 
-        """ Method to returns the size value
-
-        """
+        """ Method to returns the size value """
 
         return self.__size
 
@@ -52,9 +49,7 @@ class Square:
 
     def size(self, value):
 
-        """ Method to set the size value of the square object
-
-        """
+        """ Method to set the size value of the square object """
 
         if not isinstance(value, int):
 
@@ -75,8 +70,8 @@ class Square:
         """ Method that prints a # square according
 
         to the size value
-
-        """
+	
+	"""
 
         if not self.__size:
 
