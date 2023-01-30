@@ -34,7 +34,7 @@ class Rectangle:
 
             for i in range(self.__height):
 
-                rectangle += (Rectangle.print_symbol * self.__width) + "\n"
+                rectangle += (str(self.print_symbol) * self.__width) + "\n"
 
             return rectangle
 
