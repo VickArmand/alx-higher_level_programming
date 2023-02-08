@@ -2,6 +2,7 @@
 
 """Created by VickArmand """
 
+
 class Rectangle:
-      """This class defines a rectangle """
-      pass
+    """This class defines a rectangle """
+    pass

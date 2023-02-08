@@ -3,14 +3,11 @@
 """Created by VickArmand """
 
 
-
 class Rectangle:
 
     """This class defines a rectangle """
 
-    
-
-    def __init__(self, width = 0, height = 0):
+    def __init__(self, width=0, height=0):
 
         """ Method to initialize height and width"""
 
@@ -37,7 +34,6 @@ class Rectangle:
             return rectangle
 
     @property
-
     def width(self):
 
         """ A getter for the width property"""
@@ -45,7 +41,6 @@ class Rectangle:
         return self.__width
 
     @width.setter
-
     def width(self, value):
 
         """ A setter for the width property"""
@@ -54,7 +49,7 @@ class Rectangle:
 
             raise TypeError("width must be an integer")
 
-        elif(value < 0):
+        elif (value < 0):
 
             raise ValueError("width must be >= 0")
 
@@ -63,7 +58,6 @@ class Rectangle:
             self.__width = value
 
     @property
-
     def height(self):
 
         """ A getter for the height property"""
@@ -71,7 +65,6 @@ class Rectangle:
         return self.__height
 
     @height.setter
-
     def height(self, value):
 
         """ A setter for the height property"""
@@ -80,7 +73,7 @@ class Rectangle:
 
             raise TypeError("height must be an integer")
 
-        elif(value < 0):
+        elif (value < 0):
 
             raise ValueError("height must be >= 0")
 
@@ -105,5 +98,3 @@ class Rectangle:
         else:
 
             return (self.width + self.__height) * 2
-
-
