@@ -4,41 +4,38 @@
 Created by VickArmand
 
 """
+
+
 class Node:
-   """ This class mimicks a single node of a linked list"""
+    """ This class mimicks a single node of a linked list"""
     def __init__(self, data, next_node=None):
-    """ Instantiating data and next_node """
+        """ Instantiating data and next_node """
         self.data = data
 
         self.next_node = next_node
 
     @property
-
     def data(self):
-    """Getter for returning data"""
+        """Getter for returning data"""
         return self.__data
 
     @data.setter
     def data(self, value):
-    """Setter for initialising data """
+        """Setter for initialising data """
         if not isinstance(value, int):
 
             raise TypeError("data must be an integer")
 
         self.__data = value
 
-
-
     @property
-
     def next_node(self):
-    """Getter for returning next_node """
+        """Getter for returning next_node """
         return self.__next_node
 
     @next_node.setter
-
     def next_node(self, value):
-    """Setter for initializing the next_node """
+        """Setter for initializing the next_node """
         if not isinstance(value, Node) and value is not None:
 
             raise TypeError("next_node must be a Node object")
@@ -47,9 +44,9 @@ class Node:
 
 
 class SinglyLinkedList:
-   """This class mimicks a single linked list """
+    """This class mimicks a single linked list """
     def __str__(self):
-    """This is a string representation method """
+        """This is a string representation method """
         rtn = ""
 
         ptr = self.__head
@@ -66,13 +63,12 @@ class SinglyLinkedList:
 
         return rtn
 
-
     def __init__(self):
-    """Constructor for instantiation """
+        """Constructor for instantiation """
         self.__head = None
 
     def sorted_insert(self, value):
-    """Inserts a node in the list """
+        """Inserts a node in the list """
         ptr = self.__head
 
         while ptr is not None:
