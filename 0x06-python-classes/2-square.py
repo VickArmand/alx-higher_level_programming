@@ -5,6 +5,8 @@ Created on Jan 20 2023
 @author : VickArmand
 
 """
+
+
 class Square:
 
     """ A class that defines a square by its size """

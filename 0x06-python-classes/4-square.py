@@ -6,6 +6,7 @@ Created on Jan 26 2023
 
 """
 
+
 class Square:
 
     """ A class that defines a square by its size """
@@ -26,28 +27,20 @@ class Square:
 
             self.__size = size
 
-
-
     def area(self):
 
         """ Method that returns the square are of the objec """
 
         return (self.__size ** 2)
 
-
-
     @property
-
     def size(self):
 
         """ Method to returns the size value """
 
         return self.__size
 
-
-
     @size.setter
-
     def size(self, value):
 
         """ Method to set the size value of the square object """

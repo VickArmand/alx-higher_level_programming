@@ -5,6 +5,7 @@ Created on Jan 26 2023
 
 """
 
+
 class Square:
     
     """Class Square that defines a square object """
