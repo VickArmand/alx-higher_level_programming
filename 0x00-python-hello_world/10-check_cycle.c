@@ -8,9 +8,12 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *current = list != NULL ? list->next : NULL;
+	listint_t *current;
 	int iscycle = 0;
 
+	if (list == NULL || list->next == NULL)
+		return (0);
+	current = list->next;
 	while (current->next != NULL)
 	{
 		if (current == list)
