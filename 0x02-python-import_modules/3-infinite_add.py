@@ -7,4 +7,3 @@ if __name__ == "__main__":
         val = int(sys.argv[i])
         sum += val
     print(sum)
-
