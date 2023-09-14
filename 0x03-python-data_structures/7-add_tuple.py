@@ -13,5 +13,3 @@ def add_tuple(tuple_a=(), tuple_b=()):
             element2 = tuple_b[i]
         sum_t[i] = element1 + element2
     return sum_t[0], sum_t[1]
-
-
