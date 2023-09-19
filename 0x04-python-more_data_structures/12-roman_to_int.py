@@ -14,10 +14,11 @@ def roman_to_int(roman_string):
         length = len(roman_string)
         while i < length:
             if i != length - 1:
-                if romantoint[roman_string[i]] < romantoint[roman_string[i + 1]]:
-                        res -= romantoint[roman_string[i]]
+                if romantoint[roman_string[i]] < romantoint[
+                        roman_string[i + 1]]:
+                    res -= romantoint[roman_string[i]]
                 else:
-                        res += romantoint[roman_string[i]]
+                    res += romantoint[roman_string[i]]
             else:
                 res += romantoint[roman_string[i]]
             i += 1
