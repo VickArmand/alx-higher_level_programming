@@ -10,7 +10,15 @@ def roman_to_int(roman_string):
     elif not isinstance(roman_string, str) or not roman_string:
         return res
     else:
-        for i in roman_string:
-            if i in romantoint.keys():
-                res += romantoint[i]
+        i = 0
+        length = len(roman_string)
+        while i < length:
+            print(res)
+            if roman_string[(i - length):] == 'IV' or roman_string[
+                    (i - length):] == 'IX':
+                res += romantoint[roman_string[(i - length):]]
+                i += 2
+            elif roman_string[i] in romantoint.keys():
+                res += romantoint[roman_string[i]]
+                i += 1
     return res
