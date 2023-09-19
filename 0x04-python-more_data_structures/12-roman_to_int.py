@@ -13,7 +13,6 @@ def roman_to_int(roman_string):
         i = 0
         length = len(roman_string)
         while i < length:
-            print(res)
             if roman_string[(i - length):] == 'IV' or roman_string[
                     (i - length):] == 'IX':
                 res += romantoint[roman_string[(i - length):]]
