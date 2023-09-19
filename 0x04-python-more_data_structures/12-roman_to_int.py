@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     romantoint = {
-            'I': 1, 'IV': 4, 'V': 5,
-            'IX': 9, 'X': 10, 'L': 50,
+            'I': 1, 'V': 5,
+            'X': 10, 'L': 50,
             'C': 100, 'D': 500, 'M': 1000}
     res = 0
     if roman_string in romantoint.keys():
@@ -13,11 +13,12 @@ def roman_to_int(roman_string):
         i = 0
         length = len(roman_string)
         while i < length:
-            if roman_string[(i - length):] == 'IV' or roman_string[
-                    (i - length):] == 'IX':
-                res += romantoint[roman_string[(i - length):]]
-                i += 2
-            elif roman_string[i] in romantoint.keys():
+            if i != length - 1:
+                if romantoint[roman_string[i]] < romantoint[roman_string[i + 1]]:
+                        res -= romantoint[roman_string[i]]
+                else:
+                        res += romantoint[roman_string[i]]
+            else:
                 res += romantoint[roman_string[i]]
-                i += 1
+            i += 1
     return res
