@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+Created by Vickarmand
+Class square
+"""
+
+
 class Square:
     """
     Square that defines a square
