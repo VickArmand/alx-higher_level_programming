@@ -6,7 +6,6 @@ def safe_print_list_integers(my_list=[], x=0):
             print("{:d}".format(i), end="")
         except TypeError:
             continue
-        else:
-            count += 1
+        count += 1
     print()
     return count
