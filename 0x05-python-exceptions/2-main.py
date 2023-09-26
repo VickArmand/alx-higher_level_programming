@@ -12,4 +12,7 @@ nb_print = safe_print_list_integers(my_list, len(my_list))
 print("nb_print: {:d}".format(nb_print))
 
 nb_print = safe_print_list_integers(my_list, len(my_list) + 2)
+mylist = [1, 2, 3, "H", 4]
+x = len(mylist) - 2
+nb_print = safe_print_list_integers(mylist, x)
 print("nb_print: {:d}".format(nb_print))
