@@ -3,6 +3,10 @@
 Created by vickarmand
 class Rectangle
 """
+
+
 class Rectangle:
-    """class Rectangle defines a rectangle"""
+    """
+    class Rectangle defines a rectangle
+    """
     pass
