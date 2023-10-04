@@ -3,6 +3,7 @@ The ``0-add_integer`` module
 
 Using ``add``
 -------------------
+Case regular inputs
 >>> add_integer = __import__('0-add_integer').add_integer
 >>> add_integer(1, 2)
 3
@@ -28,4 +29,15 @@ TypeError: a must be an integer
 Traceback (most recent call last):
 	...
 TypeError: add_integer() missing 1 required positional argument: 'a'
-
+>>> add_integer(10, [1,2,3,4])
+Traceback (most recent call last):
+        ...
+TypeError: b must be an integer
+>>> add_integer(float("NaN"))
+Traceback (most recent call last):
+        ...
+ValueError: cannot convert float NaN to integer
+>>> add_integer(float("Infinity"))
+Traceback (most recent call last):
+        ...
+OverflowError: cannot convert float infinity to integer
