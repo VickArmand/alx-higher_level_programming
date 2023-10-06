@@ -3,41 +3,63 @@ The ``0-add_integer`` module
 
 Using ``add``
 -------------------
-Case regular inputs
->>> add_integer = __import__('0-add_integer').add_integer
->>> add_integer(1, 2)
-3
->>> add_integer(1.3, 2.4)
-3
->>> add_integer(100, -2)
-98
->>> add_integer(1)
-99
->>> add_integer("School", "Bus")
-Traceback (most recent call last):
-        ...
-TypeError: a must be an integer
->>> add_integer("School")
-Traceback (most recent call last):
-        ...
-TypeError: a must be an integer
->>> add_integer(None, "Bus")
-Traceback (most recent call last):
-        ...
-TypeError: a must be an integer
->>> add_integer()
-Traceback (most recent call last):
-	...
-TypeError: add_integer() missing 1 required positional argument: 'a'
->>> add_integer(10, [1,2,3,4])
-Traceback (most recent call last):
-        ...
-TypeError: b must be an integer
->>> add_integer(float("NaN"))
-Traceback (most recent call last):
-        ...
-ValueError: cannot convert float NaN to integer
->>> add_integer(float("Infinity"))
-Traceback (most recent call last):
-        ...
-OverflowError: cannot convert float infinity to integer
+Import module
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Case 1 regular inputs
+	>>> add_integer(1, 2)
+	3
+
+Case 2 float inputs
+	>>> add_integer(1.3, 2.4)
+	3
+
+Case 3 negative inputs
+	>>> add_integer(100, -2)
+	98
+
+Case 4 missing argument
+	>>> add_integer(1)
+	99
+
+Case 5 string inputs
+	>>> add_integer("School", "Bus")
+	Traceback (most recent call last):
+        	...
+	TypeError: a must be an integer
+
+Case 6 string input
+	>>> add_integer("School")
+	Traceback (most recent call last):
+        	...
+	TypeError: a must be an integer
+
+Case 7 None as input
+	>>> add_integer(None, "Bus")
+	Traceback (most recent call last):
+        	...
+	TypeError: a must be an integer
+
+Case 8 missing arguments
+	>>> add_integer()
+	Traceback (most recent call last):
+		...
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Case 9 list argument
+	>>> add_integer(10, [1,2,3,4])
+	Traceback (most recent call last):
+        	...
+	TypeError: b must be an integer
+
+Case 10 NaN argument
+	>>> add_integer(float("NaN"))
+	Traceback (most recent call last):
+        	...
+	ValueError: cannot convert float NaN to integer
+
+Case 11 Infinity arguments
+	>>> add_integer(float("Infinity"))
+	Traceback (most recent call last):
+        	...
+	OverflowError: cannot convert float infinity to integer
