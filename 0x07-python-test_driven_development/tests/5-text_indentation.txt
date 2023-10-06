@@ -1,0 +1,29 @@
+The 5-text_indentation module
+=============================
+
+Using text_indentation function
+-------------------------------
+
+Import function
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Regular Inputs
+	>>> text_indentation("The quick brown fox jumped over the lazy dogs")
+	The quick brown fox jumped over the lazy dogs
+	>>> text_indentation(":?.")
+	:
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+
+Irregular inputs
+	>>> text_indentation(["Hello World"])
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+	>>> text_indentation(2345)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
