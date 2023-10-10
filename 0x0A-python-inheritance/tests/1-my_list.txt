@@ -1,0 +1,47 @@
+The 1-my_list module
+====================
+
+Using MyList class
+------------------
+Import class
+	>>> MyList = __import__('1-my_list').MyList
+
+Creating object
+	>>> obj = MyList()
+
+Regular inputs
+	>>> obj.append(5)
+	>>> obj.append(6)
+	>>> obj.append(1)
+	>>> obj.append(4)
+	>>> obj.append(3)
+	>>> obj.append(2)
+	>>> obj.print_sorted()
+	[1, 2, 3, 4, 5, 6]
+
+Irregular inputs
+	>>> obj2 = MyList()
+        >>> obj2.append([50, 100, 90, 80])
+        >>> obj2.append([20, 70, 60])
+        >>> obj2.append([10])
+        >>> obj2.print_sorted()
+	[[10], [20, 70, 60], [50, 100, 90, 80]]
+
+	>>> obj3 = MyList()
+	>>> obj3.append("fox")
+        >>> obj3.append("quick")
+        >>> obj3.append("brown")
+        >>> obj3.append("the")
+	>>> obj3.print_sorted()
+	['brown', 'fox', 'quick', 'the']
+
+        >>> obj4 = MyList()
+        >>> obj4.append(45)
+        >>> obj4.append("quick")
+        >>> obj4.append(56)
+        >>> obj4.append('a')
+	>>> obj4.append(True)
+        >>> obj4.print_sorted()
+	Traceback (most recent call last):
+	...
+	TypeError: '<' not supported between instances of 'str' and 'int'
