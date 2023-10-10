@@ -40,7 +40,9 @@ Irregular inputs
         ...
         TypeError: height_in_cm must be an integer
         >>> bg.integer_validator("height_in_cm", True)
-
+        Traceback (most recent call last):
+        ...
+        TypeError: height_in_cm must be an integer
         >>> bg.area()
         Traceback (most recent call last):
         ...
