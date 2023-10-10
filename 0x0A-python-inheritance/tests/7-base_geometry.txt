@@ -1,0 +1,12 @@
+The 7-base_geometry module
+==========================
+
+Using BaseGeometry class
+------------------------
+Import class
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> bg = BaseGeometry()
+
+Regular inputs
+	>>> bg.integer_validator("height_in_cm", 170)
+	
