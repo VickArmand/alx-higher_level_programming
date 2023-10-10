@@ -10,3 +10,16 @@ Import class
 Regular inputs
 	>>> bg.integer_validator("height_in_cm", 170)
 	
+Irregular inputs
+	>>> bg.integer_validator("height_in_cm", "170")
+	Traceback (most recent call last):
+	...
+	TypeError: height_in_cm must be an integer
+	>>> bg.integer_validator("height_in_cm", -5)
+        Traceback (most recent call last):
+        ...
+        ValueError: height_in_cm must be greater than 0
+        >>> bg.integer_validator("height_in_cm", 0)
+        Traceback (most recent call last):
+        ...
+        ValueError: height_in_cm must be greater than 0
