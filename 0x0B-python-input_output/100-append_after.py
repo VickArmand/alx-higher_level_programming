@@ -23,6 +23,5 @@ def append_after(filename="", search_string="", new_string=""):
             else:
                 data.append(line)
             line = f.readline()
-    print(data)
     with open(filename, "w") as f:
         f.writelines(data)
