@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-
+This module hosts pascal_triangle function
 """
 
 
