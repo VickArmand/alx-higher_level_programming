@@ -15,7 +15,8 @@ class Student:
         """
         retrieves a dictionary representation of a Student instance
         """
-        if type(attrs) == list and len(attrs) > 0 and all(type(elem) == str for elem in attrs):
+        if type(attrs) == list and len(attrs) > 0 and all(
+                type(elem) == str for elem in attrs):
             new_dict = dict()
             for i in attrs:
                 if hasattr(self, i):
