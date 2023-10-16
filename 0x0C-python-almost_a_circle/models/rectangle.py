@@ -160,3 +160,9 @@ class Rectangle(Base):
                         self.__y = kwargs[key]
         except IndexError:
             pass
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a Rectangle"""
+        new_dict = {'x': self.x, 'y': self.y, 'id': self.id,
+                    'height': self.height, 'width': self.width}
+        return new_dict
