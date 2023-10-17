@@ -3,6 +3,7 @@
 This module hosts class Base
 """
 import json
+import csv
 
 
 class Base:
@@ -85,3 +86,47 @@ class Base:
             return [cls.create(**o) for o in obj]
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        serializes in CSV
+        Args
+            cls: class
+            list_objs: list of instances
+        """
+
+        filename = cls.__name__ + ".csv"
+        with open(filename, 'w') as f:
+            if cls.__name__ == "Rectangle":
+                headers = ["id", "width", "height", "x", "y"]
+                outputwriter = csv.DictWriter(f, headers)
+            else:
+                headers = ["id", "size", "x", "y"]
+                outputwriter = csv.DictWriter(f, headers)
+            for i in list_objs:
+                outputwriter.writerow(i.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        deserializes in CSV
+        Args
+            cls: class
+        """
+        obj_dict = []
+        filename = cls.__name__ + ".csv"
+        with open(filename, 'r') as f:
+            if cls.__name__ == "Rectangle":
+                headers = ["id", "width", "height", "x", "y"]
+                reader = csv.DictReader(f, headers)
+            else:
+                headers = ["id", "size", "x", "y"]
+                reader = csv.DictReader(f, headers)
+            count = 0
+            for row in reader:
+                obj_dict.append({})
+                for i in headers:
+                    obj_dict[count][i] = int(row[i])
+                count += 1
+            return [cls.create(**o) for o in obj_dict]
