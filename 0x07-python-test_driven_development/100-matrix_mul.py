@@ -11,7 +11,7 @@ def matrix_mul(m_a, m_b):
         m_a: must be an list of lists of integers or floats
         m_b: must be an list of lists of integers or floats
     Raises
-        TypeError: 
+        TypeError:
             m_a must be a list
             m_b must be a list
             m_a must be a list of lists
