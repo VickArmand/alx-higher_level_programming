@@ -12,4 +12,4 @@ def lazy_matrix_mul(m_a, m_b):
         m_a: matrix a
         m_b: matrix b
     """
-    return np.multiply(m_a, m_b)
+    return np.matmul(m_a, m_b)

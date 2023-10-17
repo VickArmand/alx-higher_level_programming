@@ -8,12 +8,13 @@ Import function
 	
 Regular inputs
 	>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
-	[[7, 10], [15, 22]]
+	array([[ 7, 10],
+	       [15, 22]])
 	>>> lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]])
-	[[13, 16]]
+	array([[13, 16]])
 
 Irregular inputs
 	>>> lazy_matrix_mul()
 	Traceback (most recent call last):
         ...
-	TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+	TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
