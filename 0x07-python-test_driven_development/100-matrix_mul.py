@@ -2,6 +2,8 @@
 """
 This module hosts a function matrix_mul
 """
+
+
 def matrix_mul(m_a, m_b):
     """
     multiplies 2 matrices
