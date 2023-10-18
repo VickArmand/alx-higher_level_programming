@@ -141,6 +141,9 @@ class Base:
             list_squares: list of square instances
         """
         for obj in list_rectangles:
+            t.penup()
+            t.goto(obj.x, obj.y)
+            t.pendown()
             for i in range(2):
                 t.forward(obj.width)
                 t.right(90)
@@ -150,6 +153,9 @@ class Base:
             t.left(180)
             t.pendown()
         for obj in list_squares:
+            t.penup()
+            t.goto(obj.x, obj.y)
+            t.pendown()
             for i in range(4):
                 t.forward(obj.width)
                 t.left(90)
