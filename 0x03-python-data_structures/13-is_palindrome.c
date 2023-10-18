@@ -8,18 +8,20 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *curr, *nxt;
+	listint_t *curr, *nxt, *prev;
 
 	if (*head == NULL)
 	{
 		return (1);
 	}
-	curr = *head;
-	nxt = (*head)->next;
-	while (curr->next != NULL)
+	prev = *head;
+	curr = prev->next;
+	nxt = curr->next;
+	while (curr != NULL)
 	{
 		if (curr->n == nxt->n || curr->next->n == nxt->next->n)
 			return (1);
+		prev = prev->next;
 		curr = curr->next;
 		nxt = nxt->next;
 	}
