@@ -4,6 +4,7 @@ This module hosts class Base
 """
 import json
 import csv
+import turtle as t
 
 
 class Base:
@@ -130,3 +131,28 @@ class Base:
                     obj_dict[count][i] = int(row[i])
                 count += 1
             return [cls.create(**o) for o in obj_dict]
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+        opens a window and draws all the Rectangles and Squares
+        Args
+            list_rectangles: list of rectangle instances
+            list_squares: list of square instances
+        """
+        for obj in list_rectangles:
+            for i in range(2):
+                t.forward(obj.width)
+                t.right(90)
+                t.forward(obj.height)
+                t.right(90)
+            t.penup()
+            t.left(180)
+            t.pendown()
+        for obj in list_squares:
+            for i in range(4):
+                t.forward(obj.width)
+                t.left(90)
+            t.penup()
+            t.right(270)
+            t.pendown()
