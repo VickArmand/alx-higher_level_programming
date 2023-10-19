@@ -149,9 +149,6 @@ class Base:
                 t.right(90)
                 t.forward(obj.height)
                 t.right(90)
-            t.penup()
-            t.left(180)
-            t.pendown()
         for obj in list_squares:
             t.penup()
             t.goto(obj.x, obj.y)
@@ -159,6 +156,3 @@ class Base:
             for i in range(4):
                 t.forward(obj.width)
                 t.left(90)
-            t.penup()
-            t.right(270)
-            t.pendown()
