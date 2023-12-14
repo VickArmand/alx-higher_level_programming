@@ -12,4 +12,5 @@ module.exports = class Square extends Rectangle {
     for (let w = 0; w < this.width; w++) str = str.concat(c);
     console.log(str);
     }
+  }
 };
