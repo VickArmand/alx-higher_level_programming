@@ -7,10 +7,12 @@ module.exports = class Square extends Rectangle {
 
   charPrint (c) {
     for (let h = 0; h < this.height; h++) {
-    let str = '';
-    if (typeof c === undefined) c = 'X';
-    for (let w = 0; w < this.width; w++) str = str.concat(c);
-    console.log(str);
+      let str = '';
+      for (let w = 0; w < this.width; w++) {
+        if (c) str = str.concat(c);
+        else str = str.concat('X');
+      }
+      console.log(str);
     }
   }
 };
