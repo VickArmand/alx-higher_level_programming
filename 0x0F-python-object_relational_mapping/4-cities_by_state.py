@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-script that lists all states with a name starting with
-N (upper N) from the database hbtn_0e_0_usa
+script that lists all cities from the database hbtn_0e_4_usa
 """
 import MySQLdb as mysql
 import sys
@@ -12,9 +11,11 @@ if __name__ == "__main__":
                               db=sys.argv[3],
                               port=3306)
     cur = dbconnect.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+    query = """SELECT c.id, c.name, s.name FROM states s JOIN
+    cities c ON s.id=c.state_id ORDER BY c.id"""
+    cur.execute(query)
     rows = cur.fetchall()
     for row in rows:
-        print("(%d, '%s')" % (row[0], row[1]))
+        print("(%d, '%s', '%s')" % (row[0], row[1], row[2]))
     cur.close()
     dbconnect.close()
