@@ -15,7 +15,7 @@ if __name__ == "__main__":
     cur = dbconnect.cursor()
     state_name = sys.argv[4]
     query = """SELECT c.name FROM states s JOIN cities c ON
-    s.id=c.state_id WHERE s.name=%s"""
+    s.id=c.state_id WHERE s.name=%s ORDER BY c.id"""
     cur.execute(query, (state_name,))
     rows = cur.fetchall()
     for row in rows:
