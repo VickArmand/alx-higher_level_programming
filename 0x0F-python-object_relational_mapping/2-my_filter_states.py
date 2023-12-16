@@ -13,7 +13,7 @@ if __name__ == "__main__":
                               db=sys.argv[3],
                               port=3306)
     cur = dbconnect.cursor()
-    cur.execute("""SELECT * FROM states WHERE name = '%s'
+    cur.execute("""SELECT * FROM states WHERE name LIKE BINARY '%s'
                 ORDER BY states.id""" % (name))
     rows = cur.fetchall()
     for row in rows:
