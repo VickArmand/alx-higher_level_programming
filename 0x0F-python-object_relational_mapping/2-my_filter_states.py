@@ -13,8 +13,8 @@ if __name__ == "__main__":
                               db=sys.argv[3],
                               port=3306)
     cur = dbconnect.cursor()
-    cur.execute("""SELECT * FROM states WHERE name LIKE BINARY '%s'
-                ORDER BY states.id""" % (name))
+    cur.execute("""SELECT * FROM states WHERE name LIKE BINARY '{}'
+                ORDER BY states.id""" .format(name))
     rows = cur.fetchall()
     for row in rows:
         print("(%d, '%s')" % (row[0], row[1]))
