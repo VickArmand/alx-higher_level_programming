@@ -17,5 +17,5 @@ class State(Base):
         characters and can’t be null
     """
     __tablename__ = "states"
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, unique=True, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
