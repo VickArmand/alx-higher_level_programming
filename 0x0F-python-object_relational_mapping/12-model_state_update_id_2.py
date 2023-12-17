@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-This module contains script that lists all State
-objects from the database hbtn_0e_6_usa
+This module contains script that Change the name of the State
+where id = 2 to New Mexico from the database hbtn_0e_6_usa
 """
 import sys
 from model_state import Base, State
