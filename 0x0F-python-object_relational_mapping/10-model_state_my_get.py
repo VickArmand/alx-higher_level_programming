@@ -11,7 +11,7 @@ engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
     sys.argv[1], sys.argv[2], sys.argv[3]))
 Session = sessionmaker(bind=engine)
 session = Session()
-records = session.query(State).filter(State.name==sys.argv[4])
+records = session.query(State).filter(State.name == sys.argv[4])
 for row in records:
     print("{}".format(row.id))
 else:
