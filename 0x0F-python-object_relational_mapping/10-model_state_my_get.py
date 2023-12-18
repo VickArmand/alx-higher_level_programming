@@ -13,7 +13,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     records = session.query(State).filter(State.name == sys.argv[4])
-    for row in records:
-        print("{}".format(row.id))
-    else:
+    try:
+        for row in records:
+            print("{}".format(row.id))
+    except:
         print("Not found")
