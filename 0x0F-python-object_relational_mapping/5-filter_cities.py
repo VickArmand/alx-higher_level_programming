@@ -18,6 +18,8 @@ if __name__ == "__main__":
     s.id=c.state_id WHERE s.name=%s ORDER BY c.id"""
     cur.execute(query, (state_name,))
     rows = cur.fetchall()
+    if (len(rows) == 0):
+        print()
     for row in rows:
         if rows.index(row) == (len(rows) - 1):
             print("%s" % (row[0]))
